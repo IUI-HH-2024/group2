@@ -4,35 +4,51 @@
 <head>
     <meta charset="utf-8">
     <title>xxxxxxxxxxxxxxxxxxxxx</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     <meta name="author" content="xxxxxxxxxxxxxxxxxxxxxx">
     <meta name="description" content="xxxxxxxxxxxxxxxxxxxxxxx">
     <meta name="keywords" content="xxxxxxxxxxxxxxxxxxxxxxx">
     <link rel="stylesheet" href="styles/styles.css">
-</head>
 
-    <!-- This is my second idea of how the site base would look like -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+</head>
 
 <body>
     <header>
-        <h1>Header</h1>
-    </header>
-    <div class="flex-container">
-        <nav class="nav2">
-            <h1>Navigation</h1>
-            <a href="index.html">Homepage</a>
-            <a href="page2.html">Page 2</a>
-            <a href="page3.html">Page 3</a>
-            <a href="page4.html">Page 4</a>
-            <a href="page5.html">Page 5</a>
+        <nav class="navbar">
+            <h1 class="logo">
+                Logo
+            </h1>
+            <div class="flex-grow"></div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
-        <div class="content">
-            <h1>Content</h1>
-        </div>
+        <ul class="nav-menu">
+            <!-- Brief intro to the topic -->
+            <a href="index.html" class="nav-item">Homepage</a>
+            <!-- Basic information on AI -->
+            <a href="page2.html" class="nav-item-active">Basics</a>
+            <!-- Pros in the classroom -->
+            <a href="page3.html" class="nav-item">Pros</a>
+            <!-- cons in the classroom -->
+            <a href="page4.html" class="nav-item">Cons</a>
+            <!-- opinions we find in our research -->
+            <a href="page5.html" class="nav-item">General</a>
+        </ul>
+    </header>
+    <script src="scripts/main.js"></script>
+
+    <div class="content">
+
     </div>
 
     <footer>
-        <h1>Footer</h1>
+        
     </footer>
 </body>
 </html>

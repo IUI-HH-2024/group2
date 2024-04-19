@@ -1,57 +1,176 @@
-body {
-    margin: 0;
+*{
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-header {
-    text-align: center;
+body{
+    background-color: rgb(247, 247, 247);
+}
+
+header{
+    position: fixed;
     top: 0;
-    border-bottom: 1px solid black;
+    z-index: 10;
     width: 100%;
+    background-color: lightgray;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
-nav {
+.logo{
+    padding: 10px;
+    height: 50px;
+    font-family: "Roboto Serif", serif;
     text-align: center;
-    border-bottom: 1px solid black;
-    width: 100%;
 }
 
-.nav2 {
-    width: 20%;
-    height: 100vh;
-    display: grid;
-    text-align: center;
-    border: 1px solid black;
+li{
+    list-style: none;
 }
 
-.flex-container {
+a{
+    color: black;
+    text-decoration: none;
+    font-family: "Roboto Serif", serif;
+}
+
+.navbar{
+    min-height: 40px;
+    padding: 0 24px;
+}
+
+.nav-menu{
+    margin: auto;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.content {
-    text-align: center;
+.nav-branding{
+    font-size: 2rem;
+}
+
+.nav-item{
+    padding: 10px;
+    border: 1px solid black;
     width: 100%;
-    height: 65vh;
-}
-
-footer {
     text-align: center;
-    bottom: 0;
-    border-top: 1px solid black;
-    width: 100%;
 }
 
+.nav-item:hover{
+    border: 2px solid black;
+    cursor: pointer;
+}
 
-/* Below are two arbitrary break points. Please adjust to fit your content's needs. You can have more than two breakpoints. You want your site to be usable at ALL viewport widths. */
+.nav-item-active{
+    padding: 10px;
+    border: 2px solid black;
+    width: 100%;
+    text-align: center;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+}
+
+.content{
+    margin: auto;
+    width: 70%;
+    height: 100vh;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+footer{
+    width: 100%;
+    height: 30vh;
+    background-color: lightgray;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media(max-width:768px) {
 
 
+    .logo{
+        flex-grow: 1;
+        text-align: center;
+    }
 
-        /*FIRST BREAK POINT === tablet  Note: This is an arbitrary break point! Change it to fit your needs. */
-        @media only screen and (max-width : 900px) {
+    .navbar{
+        position: absolute;
+        width: 100%;
+        min-height: 70px;
+        align-items: center;
+        display: flex;
+        text-align: center;
+        z-index: 10;
+        background-color: lightgrey;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    }
 
-        }
+    .hamburger{
+        display: block;
+    }
 
-        /*SECOND BREAK POINT === mobile  Note: This is an arbitrary break point! Change it to fit your needs. */
-        @media only screen and (max-width : 600px) {
-            
-        }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }    
+
+    .logo{
+        padding-left: 20px;
+    }
+
+    .nav-menu{
+        position: fixed;
+        z-index: 1;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        background-color: lightgrey;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .nav-item{
+        padding: 10px;
+        border: none;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+
+    .nav-link{
+        transition: 0.7s ease;
+    }
+    
+    .nav-link:hover{
+        color: white;
+    }
+
+    .content{
+        width: 100%;
+    }
+}
