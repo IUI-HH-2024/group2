@@ -4,67 +4,143 @@
 <head>
     <meta charset="utf-8">
     <title>AI in Learning: Transforming Teaching with Technology</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-    <meta name="author" content="Group IUI">
-    <meta name="description" content="Explore how Artificial Intelligence is revolutionizing the educational landscape, enhancing teaching and learning experiences across various levels of education.">
-    <meta name="keywords" content="AI in Education, Educational Technology, AI Teaching Tools, Learning Innovation">
-    <link rel="stylesheet" href="styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Group 2">
+    <meta name="description" content="Exploring the transformative power of AI in education and its potential to enhance teaching and learning experiences.">
+    <meta name="keywords" content="AI, Education, Teaching, Technology, Learning">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        body, h1, h2, h3, p, ul, li, a {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            font-size: 18px;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1170px;
+            margin: auto;
+            overflow: auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #bbb 1px solid;
+        }
+
+        .logo {
+            text-align: center;
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .navbar .nav-menu a {
+            color: #fff;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+
+        .navbar .nav-menu a:hover {
+            background: #555;
+            transition: background-color 0.3s;
+        }
+
+        .introduction, .main-content, footer {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+        }
+
+        /* For small screens, use a hamburger menu */
+        /* You will need to use JavaScript to toggle the menu on small screens */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        @media(max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+
+            .nav-menu.active {
+                display: block;
+            }
+        }
+    </style>
+    
+    <!-- Include your external stylesheet instead of the above <style> for production -->
+    <!-- <link rel="stylesheet" href="styles/styles.css"> -->
+
 </head>
 
 <body>
+
     <header>
-        <nav class="navbar">
-            <h1 class="logo">
-                AI in Learning: Transforming Teaching with Technology
-            </h1>
-            <div class="flex-grow"></div>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span the="bar"></span>
-            </div>
-        </nav>
-        <ul class="nav-menu">
-            <!-- Navigation items linking to different sections of the site -->
-            <a href="index.html" class="nav-item-active">Homepage</a>
-            <a href="basics.html" class="nav-item">Basics</a>
-            <a href="pros.html" class="nav-item">Pros</a>
-            <a href="cons.html" class="nav-item">Cons</a>
-            <a href="general.html" class="nav-item">General</a>
-        </ul>
+        <div class="container">
+            <nav class="navbar">
+                <h1 class="logo">Logo</h1>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="basics.html">Basics</a></li>
+                    <li><a href="pros.html">Pros</a></li>
+                    <li><a href="cons.html">Cons</a></li>
+                    <li><a href="general.html">General</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <div class="content">
+    <div class="container">
         <!-- Introduction -->
         <section class="introduction">
             <h2>Welcome to AI in Learning</h2>
-            <p>Welcome to a journey through the transformative power of Artificial Intelligence in education. As technology evolves, so does the potential to enhance teaching methods and enrich learning experiences. This site explores the integration of AI into educational settings, discussing both the opportunities and challenges it presents.</p>
+            <p>Welcome to a journey through the transformative power of Artificial Intelligence in education. Here we explore how AI shapes teaching methods and enriches learning experiences.</p>
         </section>
 
         <!-- Main Content -->
         <section class="main-content">
             <h3>Understanding AI in Education</h3>
-            <p>Artificial Intelligence can personalize learning, automate administrative tasks, and provide new ways for students to engage with material. From adaptive learning software that adjusts to individual student's pace to AI-driven analytics that help teachers assess progress, the potential is vast.</p>
-
-            <h3>The Benefits of AI</h3>
-            <p>AI technologies offer numerous advantages in the classroom. They can provide personalized learning experiences, automate grading, and give insights into student performance that were previously impossible to gather manually.</p>
-
-            <h3>The Challenges of AI</h3>
-            <p>Despite its benefits, integrating AI into educational systems is not without challenges. Issues such as data privacy, the digital divide, and the need for significant investment in infrastructure can impede the adoption of AI technologies.</p>
-
-            <h3>General Perspectives on AI</h3>
-            <p>This section will explore various opinions and research findings on the impact of AI in education, helping educators, students, and policymakers make informed decisions about incorporating AI tools into learning environments.</p>
+            <p>Artificial Intelligence can personalize learning, automate tasks, and provide new ways for students to engage with material.</p>
+            
+            <!-- More content goes here -->
         </section>
     </div>
 
     <footer>
-        <p>© 2024 by Group 2. All rights reserved.</p>
+        <div class="container">
+            <p>© 2024  All rights reserved.</p>
+        </div>
     </footer>
 
-    <script src="scripts/main.js"></script>
-</body>
-</html>
+    <script src="scripts/main.js
