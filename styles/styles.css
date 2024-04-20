@@ -56,9 +56,11 @@ a {
 }
 
 .nav-item:hover,
-.nav-item-active {
-    border: 2px solid black;
-    cursor: pointer;
+.nav-item-active{
+    padding: 10px;
+    border: 1px solid #ddd; /* Light gray border */
+    width: 100%;
+    text-align: center;
 }
 
 .hamburger {
