@@ -1,41 +1,41 @@
-.navbar {
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center-align the items */
+body {
+    background-color: black;
+    color: white; /* Ensures text is readable against the dark background */
+    font-family: 'Roboto', sans-serif;
 }
 
-.nav-container {
-    width: 100%;
+header, footer {
+    background-color: #333; /* Dark grey for header and footer for some contrast */
 }
 
-.logo {
-    margin-bottom: 20px; /* Space between logo and nav menu */
+.nav-menu a {
+    color: white; /* White text for links for contrast */
 }
 
-.nav-menu {
-    display: flex;
-    justify-content: center;
-    list-style-type: none; /* Removes default list styling */
+.content-box {
+    background-color: blue; /* Blue background for content sections */
+    border: 2px solid red; /* Red border for emphasis */
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Soft shadow for depth */
+    font-family: 'Roboto', sans-serif;
 }
 
-.nav-item {
-    margin: 0 10px; /* Space between items */
+.logo, h1, h2, p {
+    color: #FFF; /* Ensuring all text is white for readability */
 }
 
+/* Additional styles for responsiveness and aesthetics */
 @media (max-width: 768px) {
-    .nav-menu {
-        flex-direction: column;
+    .nav-container, .nav-menu {
+        display: block;
     }
 
     .hamburger {
-        display: block; /* Show hamburger menu on small screens */
+        display: block;
     }
 
     .nav-menu {
-        display: none; /* Initially hide the navigation menu on small screens */
-    }
-
-    .nav-menu.active {
-        display: flex; /* Display the menu when active */
+        text-align: center;
     }
 }
