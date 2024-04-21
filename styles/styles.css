@@ -7,7 +7,8 @@
 body {
     background-color: rgb(247, 247, 247);
     font-family: "Roboto Serif", serif;
-    padding-top: 60px; /* Added padding to push the content down from the fixed header */
+    padding-top: 60px; /* To avoid overlap with the fixed header */
+    padding-bottom: 60px; /* To avoid content being hidden behind the footer */
 }
 
 header {
@@ -17,12 +18,11 @@ header {
     width: 100%;
     background-color: lightgray;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-    padding: 10px 0; /* Adjust this as needed to fit your header content */
+    padding: 10px 0;
 }
 
 .logo {
     padding: 10px;
-    font-family: "Roboto Serif", serif;
     text-align: center;
 }
 
@@ -51,16 +51,13 @@ a {
 
 .nav-item {
     padding: 10px;
-    margin: 0 5px; /* Add some space between menu items */
+    margin: 0 5px;
     text-align: center;
 }
 
 .nav-item:hover,
-.nav-item-active{
-    padding: 10px;
-    border: 1px; /* Light gray border */
-    width: 100%;
-    text-align: center;
+.nav-item-active {
+    border: 1px solid #ddd; /* Specified border color and style */
 }
 
 .hamburger {
@@ -78,8 +75,8 @@ a {
 
 .content {
     width: 70%;
-    margin: 20px auto; /* Add top margin to separate from the header and center content */
-    padding: 20px; /* Add padding for spacing inside the content box */
+    margin: 20px auto;
+    padding: 20px;
     background-color: white;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
@@ -102,6 +99,7 @@ footer {
         display: block;
     }
 
+    .nav-menu.active,
     .nav-menu {
         display: none;
     }
@@ -112,7 +110,7 @@ footer {
 
     .nav-item {
         width: 100%;
-        border: none;
+        padding: 10px; /* Keep padding consistent */
     }
 
     .content {
