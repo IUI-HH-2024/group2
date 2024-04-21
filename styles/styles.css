@@ -1,120 +1,41 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+.navbar {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align the items */
 }
 
-body {
-    background-color: rgb(247, 247, 247);
-    font-family: "Roboto Serif", serif;
-    padding-top: 60px; /* To avoid overlap with the fixed header */
-    padding-bottom: 60px; /* To avoid content being hidden behind the footer */
-}
-
-header {
-    position: fixed;
-    top: 0;
-    z-index: 10;
+.nav-container {
     width: 100%;
-    background-color: lightgray;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-    padding: 10px 0;
 }
 
 .logo {
-    padding: 10px;
-    text-align: center;
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    color: black;
-    text-decoration: none;
-    font-family: "Roboto Serif", serif;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 24px;
+    margin-bottom: 20px; /* Space between logo and nav menu */
 }
 
 .nav-menu {
     display: flex;
     justify-content: center;
-    align-items: center;
+    list-style-type: none; /* Removes default list styling */
 }
 
 .nav-item {
-    padding: 10px;
-    margin: 0 5px;
-    text-align: center;
-}
-
-.nav-item:hover,
-.nav-item-active {
-    border: 1px solid #ddd; /* Specified border color and style */
-}
-
-.hamburger {
-    display: none;
-    cursor: pointer;
-}
-
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: black;
-}
-
-.content {
-    width: 70%;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-}
-
-footer {
-    width: 100%;
-    padding: 20px 0;
-    background-color: lightgray;
-    box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.2), 0 -3px 10px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
+    margin: 0 10px; /* Space between items */
 }
 
 @media (max-width: 768px) {
-    .navbar,
     .nav-menu {
         flex-direction: column;
     }
 
     .hamburger {
-        display: block;
+        display: block; /* Show hamburger menu on small screens */
     }
 
-    .nav-menu.active,
     .nav-menu {
-        display: none;
+        display: none; /* Initially hide the navigation menu on small screens */
     }
 
     .nav-menu.active {
-        display: flex;
-    }
-
-    .nav-item {
-        width: 100%;
-        padding: 10px; /* Keep padding consistent */
-    }
-
-    .content {
-        width: 100%;
-        padding: 20px;
+        display: flex; /* Display the menu when active */
     }
 }
