@@ -1,32 +1,93 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Font Import from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&family=Montserrat:wght@400;700&display=swap');
+
 body {
-    background-color: black;
-    color: white; /* Ensures text is readable against the dark background */
     font-family: 'Roboto', sans-serif;
+    color: white;
+    background-color: black; /* Using black for high contrast */
+    line-height: 1.6;
+    padding: 20px;
 }
 
-header, footer {
-    background-color: #333; /* Dark grey for header and footer for some contrast */
+header {
+    background-color: #333; /* Dark grey for header */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
 }
 
-.nav-menu a {
-    color: white; /* White text for links for contrast */
+nav {
+    background-color: #444; /* Slightly lighter grey for navigation */
+    padding: 10px 0;
+    text-align: right;
 }
 
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* Heading styles */
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Special effects using italic Montserrat */
+.special-effects {
+    font-style: italic;
+    font-family: 'Montserrat', sans-serif;
+    color: orange;
+}
+
+/* Content box for layout */
 .content-box {
     background-color: blue; /* Blue background for content sections */
     border: 2px solid red; /* Red border for emphasis */
     padding: 20px;
     margin: 20px 0;
     box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Soft shadow for depth */
-    font-family: 'Roboto', sans-serif;
 }
 
-.logo, h1, h2, p {
-    color: #FFF; /* Ensuring all text is white for readability */
+footer {
+    background-color: #333; /* Matching the header */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
-/* Additional styles for responsiveness and aesthetics */
-@media (max-width: 768px) {
+/* Responsive Design Adjustments */
+@media only screen and (max-width: 768px) {
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin-top: 10px;
+    }
+
     .nav-container, .nav-menu {
         display: block;
     }
@@ -36,6 +97,10 @@ header, footer {
     }
 
     .nav-menu {
+        text-align: center;
+    }
+
+    header, footer {
         text-align: center;
     }
 }
