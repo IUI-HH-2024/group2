@@ -1,89 +1,98 @@
-/* Basic styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: black;
-    color: white;
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap');
+
+/* CSS Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Header and Navigation Styles */
+/* Body Styles */
+body {
+    font-family: 'Roboto Slab', serif; /* Updated font-family */
+    background-color: #FFF; /* White background */
+    color: #333; /* Darker text for better readability */
+    line-height: 1.6;
+}
+
+/* Header Styles */
 header {
-    background-color: #333; /* Dark grey */
-    padding: 10px 20px;
+    background-color: #FFA07A; /* Light salmon color, akin to Orange */
+    padding: 20px 0;
     text-align: center;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-}
-
-.nav-menu {
-    list-style: none;
-    display: flex;
-    margin: 0;
+/* Navigation Menu Styles */
+nav .nav-menu {
+    list-style-type: none;
     padding: 0;
 }
 
-.nav-menu li {
-    padding: 10px 15px;
+nav .nav-menu li {
+    display: inline;
+    margin-right: 20px;
 }
 
-.nav-menu a {
+nav .nav-menu a {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: white;
+    color: #005f73; /* Dark blue color */
     text-decoration: none;
+    padding: 10px;
     transition: color 0.3s ease;
 }
 
-.nav-menu a:hover, .nav-menu a:focus {
-    color: orange; /* Highlight color on hover */
+nav .nav-menu a:hover, 
+nav .nav-menu a:focus {
+    color: #0a9396; /* Lighter blue for hover/focus state */
 }
 
-/* Hamburger menu for mobile */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
+/* Content Box Styles */
+.content-box {
+    background-color: #e0f2e9; /* Light green color */
+    padding: 20px;
+    margin: 20px auto; /* Centering the content box */
+    width: 80%; /* Adjust width as per design requirement */
+    border-left: 5px solid #94d2bd; /* Darker green border for emphasis */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.hamburger .bar {
-    background-color: white;
-    height: 3px;
-    width: 25px;
-    margin: 3px 0;
-    transition: all 0.3s ease;
+/* Footer Styles */
+footer {
+    background-color: #FFA07A;
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
+/* Typography */
+.logo, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #005f73;
+}
+
+.special-effects {
+    font-style: italic;
+    color: #f4a261; /* Orange color for special effects */
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-menu {
-        display: none; /* Hide nav menu by default on mobile */
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: #333;
-    }
-
-    .nav-menu.active {
-        display: flex; /* Show menu when active (e.g., hamburger is clicked) */
-    }
-
-    .nav-menu li {
+    nav .nav-menu {
+        display: block;
         text-align: center;
-        width: 100%;
+    }
+
+    nav .nav-menu li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .content-box {
+        width: 95%; /* Adjust width for smaller devices */
     }
 }
