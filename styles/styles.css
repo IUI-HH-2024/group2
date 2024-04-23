@@ -21,12 +21,33 @@ header {
     background-color: #FFA07A; /* Light salmon color, akin to Orange */
     padding: 20px 0;
     text-align: center;
+    position: relative; /* Supports absolute positioning for children */
+}
+
+/* Logo Image Styles */
+header .logo-img {
+    position: absolute; /* Positioning logo absolutely within the header */
+    top: 50%; /* Align vertically */
+    left: 20px; /* Space from the left */
+    transform: translateY(-50%); /* Center-align logo vertically */
+    height: 50px; /* Set the logo height */
+}
+
+/* Logo Text Styles */
+.logo {
+    display: inline-block;
+    line-height: 50px;
+    vertical-align: top;
+    margin: 0;
+    padding: 0 10px;
 }
 
 /* Navigation Menu Styles */
 nav .nav-menu {
     list-style-type: none;
     padding: 0;
+    display: inline-block; /* Change from inline to inline-block */
+    margin-left: 120px; /* Make space for the logo image */
 }
 
 nav .nav-menu li {
@@ -82,9 +103,15 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    header .logo-img {
+        left: 10px; /* Adjust logo position for mobile */
+    }
+
     nav .nav-menu {
         display: block;
         text-align: center;
+        margin-top: 10px; /* Additional margin for mobile */
+        margin-left: 0; /* Remove margin to center menu on mobile */
     }
 
     nav .nav-menu li {
@@ -94,5 +121,9 @@ footer {
 
     .content-box {
         width: 95%; /* Adjust width for smaller devices */
+    }
+
+    header {
+        padding: 10px 0; /* Less padding on mobile */
     }
 }
