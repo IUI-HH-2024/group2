@@ -74,32 +74,16 @@ main {
     background-image: url('images/educ.jpg'); /* Path to your background image */
     background-size: cover; /* Ensure the image covers the entire area */
     background-position: center; /* Center the image */
-    position: relative; /* Needed to position the overlay */
     padding: 20px; /* Padding around the content */
-}
-
-/* Semi-transparent overlay for the main content area */
-main::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
-    z-index: 0; /* Overlay must be below the content */
 }
 
 /* Content Box Styles */
 .content-box {
-    position: relative; /* Ensure content is positioned relative to the overlay */
-    z-index: 1; /* Higher than the overlay to keep content above */
     padding: 20px;
     margin: 20px auto; /* Centering the content box */
     width: 80%; /* Adjust width as per design requirement */
     border-left: 5px solid #94d2bd; /* Stylistic choice for emphasis */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: transparent; /* Make the background of the boxes transparent */
 }
 
 /* Footer Styles */
