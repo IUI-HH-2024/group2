@@ -101,17 +101,16 @@ a{
 .content{
     margin: auto;
     width: 70%;
-    height: 100vh;
+    /* height: 100vh; WHY DO THIS? */
     background-color: white;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
     padding-top: 100px; /* Add top padding to ensure content doesn't hide behind     navbar */
-    text-align: center
+    text-align: left;
     padding-bottom: 20px; /* Padding at the bottom for spacing */
 }
 
 footer{
     width: 100%;
-    height: 30vh;
     background-color: lightgray;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
@@ -230,12 +229,18 @@ footer{
 }
 .basics .content {
     background-color: #FFDAB9; /* Light Orange (Peach Puff) */
+	padding-left: 1em;
+	padding-right: 1em;
 }
 .pros .content {
     background-color: #AED6F1; /* Light Cyan (Light Cyan) */
+	padding-left: 1em;
+	padding-right: 1em;
 }
 .cons .content {
     background-color: #FADBD8; /* Light Pink*/
+	padding-left: 1em;
+	padding-right: 1em;
 }
 .index .logo {
     background-color: #ABEBC6; /* Light Green */
