@@ -305,7 +305,6 @@ footer{
     box-sizing: border-box; /* Include padding and border in total width and height */
     overflow: auto; /* Enable scrolling if content exceeds card's height */
 }
-}
 
 .card-front {
     background-color: #ffffff; /* White background for the front of the card */
