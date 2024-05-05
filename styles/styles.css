@@ -282,7 +282,7 @@ footer{
 }
 
 .card-content, .card-front {
-    position: absolute;
+    position:absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -299,7 +299,7 @@ footer{
 .card-content {
     background: #ffffff; /* White background for the flipped content */
     color: black; /* Black text for flipped content */
-    transform: rotateY(180deg); /* Positioned at the back initially */
+    transform: rotateY(-180deg); /* Positioned at the back initially */
     transition: transform 0.6s;
     overflow: scroll;
 }
@@ -307,11 +307,11 @@ footer{
 .card-front {
     background-color: #ffffff; /* White background for the front of the card */
     color: black; /* Black text */
-    transform: rotateY(0); /* Shows front face of the card first */
+    transform: rotateY(0deg); /* Shows front face of the card first */
 }
 
 .card:hover .card-content {
-    transform: rotateY(0); /* Rotate to show detailed content when hovered on by the user */
+    transform: rotateY(0deg); /* Rotate to show detailed content when hovered on by the user */
 }
 
 .card:hover .card-front {
