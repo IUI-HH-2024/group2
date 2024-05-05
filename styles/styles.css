@@ -301,6 +301,7 @@ footer{
     color: black; /* Black text for flipped content */
     transform: rotateY(180deg); /* Positioned at the back initially */
     transition: transform 0.6s;
+    overflow: scroll;
 }
 
 .card-front {
