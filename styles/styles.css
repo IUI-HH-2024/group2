@@ -258,6 +258,25 @@ footer{
     background-color: #FADBD8; /* Light Pink */
 }
 
+.general .content {
+    background-color: #d3d3d3; /* Light gray */
+	padding-left: 1em;
+	padding-right: 1em;
+}
+.general .logo {
+    background-color: #d3d3d3; /* Light gray */
+}
+
+.references .content {
+    background-color: #33473b
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.references .logo
+{
+    background-color: #33473b
+}
 
 .card-container {
     display: flex;
@@ -310,11 +329,11 @@ footer{
 }
 
 .card:hover .card-content {
-    transform: rotateY(0); /* Rotate to show detailed content */
+    transform: rotateY(0); /* Rotate to show detailed content when hovered on by the user */
 }
 
 .card:hover .card-front {
-    transform: rotateY(-180deg); /* Rotate to hide front content when hovered by the user */
+    transform: rotateY(-180deg); /* Rotate to hide front content when hovered on by the user */
 }
 
 .card-content a {
@@ -324,5 +343,6 @@ footer{
 
 .card-content a:hover {
     color: darkblue; /* Changes the link color on hover for better interactivity */
-    text-decoration: none;
+    text-decoration: none; /* Removes the underline on hover for a change effect */
 }
+
