@@ -282,7 +282,7 @@ footer{
 }
 
 .card-content, .card-front {
-    position:absolute;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -293,29 +293,36 @@ footer{
     justify-content: center;
     align-items: center;
     padding: 20px;
-    line-height: 28px;
+    text-align: center;
 }
 
 .card-content {
     background: #ffffff; /* White background for the flipped content */
     color: black; /* Black text for flipped content */
-    transform: rotateY(-180deg); /* Positioned at the back initially */
+    transform: rotateY(180deg); /* Positioned at the back initially */
     transition: transform 0.6s;
-    margin: 0; /* Reset margin */
-    box-sizing: border-box; /* Include padding and border in total width and height */
-    overflow: auto; /* Enable scrolling if content exceeds card's height */
 }
 
 .card-front {
     background-color: #ffffff; /* White background for the front of the card */
     color: black; /* Black text */
-    transform: rotateY(0deg); /* Shows front face of the card first */
+    transform: rotateY(0); /* Shows front face of the card first */
 }
 
 .card:hover .card-content {
-    transform: rotateY(0deg); /* Rotate to show detailed content when hovered on by the user */
+    transform: rotateY(0); /* Rotate to show detailed content */
 }
 
 .card:hover .card-front {
-    transform: rotateY(-180deg); /* Rotate to hide front content when hovered on by the user */
+    transform: rotateY(-180deg); /* Rotate to hide front content when hovered by the user */
+}
+
+.card-content a {
+    color: blue; /* Sets the link color to blue */
+    text-decoration: underline; /* Underlines the link */
+}
+
+.card-content a:hover {
+    color: darkblue; /* Changes the link color on hover for better interactivity */
+    text-decoration: none;
 }
