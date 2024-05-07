@@ -31,7 +31,7 @@ header{
     background-repeat: no-repeat; /* Ensures the background image doesn't repeat */
     background-size: cover; /* Covers the entire area of the block */
     background-position: center; /* Center the background image */
-   }
+}
 
 li{
     list-style: none;
@@ -115,81 +115,6 @@ footer{
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
-@media(max-width:768px) {
-
-
-    .logo{
-        flex-grow: 1;
-        text-align: center;
-    }
-
-    .navbar{
-        position: absolute;
-        width: 100%;
-        min-height: 70px;
-        align-items: center;
-        display: flex;
-        text-align: center;
-        z-index: 10;
-        background-color: lightgrey;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    .hamburger{
-        display: block;
-    }
-
-    .hamburger.active .bar:nth-child(2){
-        opacity: 0;
-    }
-    
-    .hamburger.active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-    
-    .hamburger.active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }    
-
-    .logo{
-        padding-left: 20px;
-    }
-
-    .nav-menu{
-        position: fixed;
-        z-index: 1;
-        left: -100%;
-        top: 70px;
-        gap: 0;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        background-color: lightgrey;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    .nav-item{
-        padding: 10px;
-        border: none;
-    }
-
-    .nav-menu.active{
-        left: 0;
-    }
-
-    .nav-link{
-        transition: 0.7s ease;
-    }
-    
-    .nav-link:hover{
-        color: white;
-    }
-
-    .content{
-        width: 100%;
-    }
-}
 .info-box {
             background-color: #e6e6e6; /* gray background for the content boxes */
             border: 1px solid #cccccc; /* Gray border for the boxes */
@@ -346,3 +271,77 @@ footer{
     text-decoration: none; /* Removes the underline on hover for a change effect */
 }
 
+@media(max-width:768px) {
+
+    .logo{
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .navbar{
+        position: absolute;
+        width: 100%;
+        min-height: 70px;
+        align-items: center;
+        display: flex;
+        text-align: center;
+        z-index: 10;
+        background-color: lightgrey;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }    
+
+    .logo{
+        padding-left: 20px;
+    }
+
+    .nav-menu{
+        position: fixed;
+        z-index: 1;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        background-color: lightgrey;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .nav-item{
+        padding: 10px;
+        border: none;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+
+    .nav-link{
+        transition: 0.7s ease;
+    }
+    
+    .nav-link:hover{
+        color: white;
+    }
+
+    .content{
+        width: 100%;
+    }
+}
